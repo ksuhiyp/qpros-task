@@ -1,0 +1,19 @@
+{
+  "name": "qpros-task",
+  "version": "1.0.0",
+  "description": "selinuim test script and express api as a task for qpros interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksuhiyp/qpros-task.git"
+  },
+  "author": "suhayb kharabsheh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksuhiyp/qpros-task/issues"
+  },
+  "homepage": "https://github.com/ksuhiyp/qpros-task#readme"
+}
