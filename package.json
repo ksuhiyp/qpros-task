@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "selinuim test script and express api as a task for qpros interview",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "test"
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/ksuhiyp/qpros-task/issues"
   },
-  "homepage": "https://github.com/ksuhiyp/qpros-task#readme"
+  "homepage": "https://github.com/ksuhiyp/qpros-task#readme",
+  "dependencies": {
+    "@types/selenium-webdriver": "^4.1.20",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "selenium-webdriver": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.4",
+    "typescript": "^5.3.2"
+  }
 }
