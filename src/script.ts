@@ -1,5 +1,5 @@
-import { Builder, By, Key } from "selenium-webdriver";
-export const google = async function () {
+import { Builder, By, Key, WebElement } from "selenium-webdriver";
+export const google = async function (): Promise<WebElement> {
   const chromeDriver = await new Builder().forBrowser("chrome").build();
 
   try {
@@ -16,6 +16,10 @@ export const google = async function () {
       chromeDriver.findElement(By.id("search")).isDisplayed(),
       10000
     );
+
+    // return the results of the search
+    const searchResults = await chromeDriver.findElement(By.id("search"));
+    return searchResults;
   } catch (error) {
     console.error("selenium script failed:\n", error);
   } finally {
